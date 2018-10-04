@@ -35,12 +35,12 @@ public class PacMan extends Application {
         Rectangle backGround = new Rectangle(10000, 10000);    //
         /******************************************************/
         
-        // setting the text for the physical buttons on the screen  //
-        up.setText("^");                                            //          
-        left.setText("<");                                          //
-        down.setText("V");                                          //
-        right.setText(">");                                         //
-        /************************************************************/
+        // setting the text for the buttons on the screen   //
+        up.setText("^");                                    //          
+        left.setText("<");                                  //
+        down.setText("V");                                  //
+        right.setText(">");                                 //
+        /****************************************************/
         
         // the position of the down button on the screen    // 
         down.setTranslateX(300);// left and right pos       //
