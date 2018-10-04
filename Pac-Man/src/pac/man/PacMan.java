@@ -42,35 +42,61 @@ public class PacMan extends Application {
         right.setText(">");                                         //
         /************************************************************/
         
+        // the position of the down button on the screen    // 
+        down.setTranslateX(300);// left and right pos       //
+        down.setTranslateY(335);// up and down pos          //
+        /****************************************************/
+        
+        // the position of the right button on the screen   // 
+        right.setTranslateX(325);// left and right pos      //
+        right.setTranslateY(335);// up and down pos         //
+        /****************************************************/
+        
+        // the position of the left button on the screen    // 
+        left.setTranslateX(273);// left and right pos       //
+        left.setTranslateY(335);// up and down pos          //
+        /****************************************************/
+        
+        // the position of the up button on the screen      //
+        up.setTranslateX(300);// left and right pos         //
+        up.setTranslateY(308);// up and down pos            //
+        /****************************************************/
         
         // setting the background color for the background  //
         backGround.setFill(Color.BLACK);                    //
         /****************************************************/
         
+        
+        // Event driven to move pacman usign the keyboard
         up.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
             }
              });
+        /***************************************************/
         
-        // initializing what'll be the main window frame
-        StackPane root = new StackPane();
         
+        // initializing what'll be the main window frame    //
+        StackPane root = new StackPane();                   //
+        /****************************************************/
+        
+        // adding the objects to the stackpane. aka main window
         root.getChildren().add(backGround);
-        // adding materials to the screen
-        // root.getChildren().add(up);
-        // root.getChildren().add(left);
+        root.getChildren().add(up);
+        root.getChildren().add(left);
         root.getChildren().add(down);
+        root.getChildren().add(right);
         
         
         
         // setting the size of the window, what'll be included and showing it
-        Scene scene = new Scene(root, 600, 600);
+        Scene scene = new Scene(root, 700, 700);
         
-        primaryStage.setTitle("Pac-man Java");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        primaryStage.setTitle("Pac-man Java");// Title
+        primaryStage.setResizable(false);// not being able to resize the screen 
+        primaryStage.setScene(scene);// putting it all together
+        primaryStage.show();// showing the window
     }
 
     /**
