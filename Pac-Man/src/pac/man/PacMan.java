@@ -31,9 +31,9 @@ public class PacMan extends Application {
         Button right = new Button();// right            //
         /************************************************/
         
-        // the background                                      //
-        Rectangle backGround = new Rectangle(10000, 10000);    //
-        /******************************************************/
+        // the background                                     //
+        Rectangle backGround = new Rectangle(10000, 10000);   //
+        /*****************************************************/
         
         // setting the text for the buttons on the screen   //
         up.setText("^");                                    //          
