@@ -31,9 +31,13 @@ public class PacMan extends Application {
         Button right = new Button();// right            //
         /************************************************/
         
+        // creating pacman                  //
+        Circle pacMan = new Circle();       // 
+        /************************************/
+
         // the background                                     //
         Rectangle backGround = new Rectangle(10000, 10000);   //
-        /*****************************************************/
+        /******************************************************/
         
         // setting the text for the buttons on the screen   //
         up.setText("^");                                    //          
@@ -61,6 +65,12 @@ public class PacMan extends Application {
         up.setTranslateX(300);// left and right pos         //
         up.setTranslateY(308);// up and down pos            //
         /****************************************************/
+
+
+        // setting the initial location for pacman
+        pacMan.setTranslateX(300);
+        pacMan.setTranslateY(300);
+
         
         // setting the background color for the background  //
         backGround.setFill(Color.BLACK);                    //
@@ -82,11 +92,12 @@ public class PacMan extends Application {
         /****************************************************/
         
         // adding the objects to the stackpane. aka main window
-        root.getChildren().add(backGround);
-        root.getChildren().add(up);
-        root.getChildren().add(left);
-        root.getChildren().add(down);
-        root.getChildren().add(right);
+        root.getChildren().add(backGround);//<------- the background color
+        root.getChildren().add(pacMan);//<----------- adding pacman to the main window
+        root.getChildren().add(up);//<--------------- the up button
+        root.getChildren().add(left);//<------------- the left button
+        root.getChildren().add(down);//<------------- the down button
+        root.getChildren().add(right);//<------------ the uright button
         
         
         
