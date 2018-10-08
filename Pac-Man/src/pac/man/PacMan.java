@@ -68,18 +68,42 @@ public class PacMan extends Application {
         // setting the initial location for pacman //
         pacMan.setRadius(20);
         pacMan.setFill(Color.YELLOW);// the color for pacman//
-        pacMan.setTranslateX(300);// the location for pacman
-        pacMan.setTranslateY(300);
+        //pacMan.setTranslateX(300);// the location for pacman
+        //pacMan.setTranslateY(300);
+        /****************************************************/
 
+        
         // setting the background color for the background- //
         backGround.setFill(Color.BLACK);//----------------- //
         /****************************************************/
 
-        // Event driven to move pacman usign the keyboard
+        
+        // Event driven to move pacman using the buttons on screen 
         up.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.out.println("Up!");
+            }
+        });
+        
+        down.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Down!");
+            }
+        });
+        
+        left.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Left!!");
+            }
+        });       
+        
+        right.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Right!");
             }
         });
         /***************************************************/
