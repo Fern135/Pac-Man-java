@@ -34,10 +34,12 @@ public class PacMan extends Application {
         Circle pacMan = new Circle(); //
         /************************************/
 
-        // the background //
-        Rectangle backGround = new Rectangle(10000, 10000); //
+        // the background------------------------------------- //
+        Rectangle backGround = new Rectangle(10000, 10000);//- //
         /******************************************************/
 
+        Rectangle backG = new Rectangle(1000, 200);
+        
         // setting the text for the buttons on the screen //
         up.setText("^"); // ------------------------------//
         left.setText("<"); // ----------------------------//
@@ -68,15 +70,18 @@ public class PacMan extends Application {
         // setting the initial location for pacman //
         pacMan.setRadius(20);
         pacMan.setFill(Color.YELLOW);// the color for pacman//
-        //pacMan.setTranslateX(300);// the location for pacman
-        //pacMan.setTranslateY(300);
+        pacMan.setTranslateX(10);// the location for pacman
+        pacMan.setTranslateY(260);
         /****************************************************/
 
         
         // setting the background color for the background- //
         backGround.setFill(Color.BLACK);//----------------- //
         /****************************************************/
-
+        
+        // background for the buttons and lifes 
+        backG.setFill(Color.GRAY);
+        backG.setTranslateY(390);
         
         // Event driven to move pacman using the buttons on screen 
         up.setOnAction(new EventHandler<ActionEvent>() {
@@ -114,6 +119,7 @@ public class PacMan extends Application {
 
         // adding the objects to the stackpane. aka main window
         root.getChildren().add(backGround);// <------- the background color
+        root.getChildren().add(backG);//<------------- the background for the buttons and lifes 
         root.getChildren().add(pacMan);// <----------- adding pacman to the main window
         root.getChildren().add(up);// <--------------- the up button
         root.getChildren().add(left);// <------------- the left button
