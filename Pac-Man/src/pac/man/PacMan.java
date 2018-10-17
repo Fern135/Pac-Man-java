@@ -3,11 +3,15 @@
  */
 package pac.man;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -83,7 +87,9 @@ public class PacMan extends Application {
         backG.setFill(Color.GRAY);
         backG.setTranslateY(390);
         
-        // Event driven to move pacman using the buttons on screen 
+        
+        // Event driven to move pacman using the buttons on screen
+        // using the onscreen buttons 
         up.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -109,6 +115,20 @@ public class PacMan extends Application {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Right!");
+            }
+        });
+        
+        // for closing the app 
+        primaryStage.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent ke) {
+                if (ke.getCode() == KeyCode.ESCAPE) {
+                    try {
+                        stop();
+                        ke.consume();// use the parser 
+                    } catch (Exception ex) {
+                        Logger.getLogger(PacMan.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             }
         });
         /***************************************************/
